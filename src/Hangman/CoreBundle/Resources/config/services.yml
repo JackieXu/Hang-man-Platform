@@ -1,0 +1,26 @@
+parameters:
+    hangman_core.entity.game: Hangman\CoreBundle\Entity\Game
+    hangman_core.entity.word: Hangman\CoreBundle\Entity\Word
+    hangman_core.entity.guess: Hangman\CoreBundle\Entity\Guess
+    hangman_core.manager.game: Hangman\CoreBundle\Service\GameManager
+    hangman_core.manager.word: Hangman\CoreBundle\Service\WordManager
+    hangman_core.manager.guess: Hangman\CoreBundle\Service\GuessManager
+services:
+    hangman_core.manager.game:
+        class: %hangman_core.manager.game%
+        arguments:
+            class:      %hangman_core.entity.game%
+            dispatcher: "@event_dispatcher"
+            em:         "@doctrine.orm.entity_manager"
+    hangman_core.manager.word:
+        class: %hangman_core.manager.word%
+        arguments:
+            class:      %hangman_core.entity.word%
+            dispatcher: "@event_dispatcher"
+            em:         "@doctrine.orm.entity_manager"
+    hangman_core.manager.guess:
+            class: %hangman_core.manager.guess%
+            arguments:
+                class:      %hangman_core.entity.guess%
+                dispatcher: "@event_dispatcher"
+                em:         "@doctrine.orm.entity_manager"

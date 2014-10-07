@@ -1,0 +1,7 @@
+hangman_web_index:
+    path:       /
+    defaults:   { _controller: HangmanWebBundle:Game:index }
+
+hangman_web_detailed:
+    path:       /
+    defaults:   { _controller: HangmanWebBundle:Game:detailed }

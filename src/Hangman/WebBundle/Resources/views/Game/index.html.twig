@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {% stylesheets "@HangmanWebBundle/Resources/public/css/*" filter="cssrewrite" %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock  %}
+
+{% block body %}
+    {% for game in games %}
+        <a href="{{  }}">
+            <div class="game">
+                <h3 class="game-title">{{ game.id }}</h3>
+                <ul>
+                    {% for guess in game.guesses %}
+                    <li>{{ guess.letter }}</li>
+                    {% else %}
+                    <li>No guesses yet; start now!</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </a>
+    {% else %}
+        <p>Oh boy, no active games found.</p>
+    {% endfor  %}
+{% endblock %}

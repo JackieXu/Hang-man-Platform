@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Cool behind-the-scenes stuff -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- What's in a name -->
+        <title>{% block title %}Hang, man!{% endblock %}</title>
+
+        <!-- Beauty is only a stylesheet deep -->
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        <!-- Magic? We call it JavaScript -->
+        {% block javascripts %}
+            {% javascripts "assets/polymer.js" %}
+                <script src="{{ asset_url }}"></script>
+            {% endjavascripts %}
+        {% endblock %}
+    </body>
+</html>

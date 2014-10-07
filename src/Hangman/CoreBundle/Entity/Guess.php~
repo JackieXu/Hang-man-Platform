@@ -1,0 +1,35 @@
+<?php
+
+
+namespace Hangman\CoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Guess
+ *
+ * @ORM\Entity(repositoryClass="Hangman\CoreBundle\Entity\Repository\GuessRepository")
+ * @ORM\Table(name="guesses", indexes={
+ *  @ORM\Index(name="character_index", columns={"letter"})
+ * })
+ *
+ * @package Hangman\CoreBundle\Entity
+ */
+class Guess
+{
+    /**
+     * @ORM\Id
+     * @ORM\ManyToOne(targetEntity="Hangman\CoreBundle\Entity\Game", inversedBy="guesses")
+     *
+     * @var \Hangman\CoreBundle\Entity\Game
+     */
+    protected $game;
+
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="string", length=1, options={"fixed" = true})
+     *
+     * @var string
+     */
+    protected $letter;
+}
