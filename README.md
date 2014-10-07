@@ -9,7 +9,7 @@ Install
 Getting started with your own local Hang, man! platform is no trouble at all. Simply clone (or fork, if you're in an
 especially good mood!) the repository to your local development set-up, and follow the instructions:
 
- 1. Clone the repository `git clone git@github.com:JackieXu/Hangman.git hangman`
+ 1. Clone the repository `git clone git@github.com:JackieXu/Hang-man-Platform.git hangman`
  2. In your terminal, change directories to the root Hang, man! directory: `cd hangman`
  3. Install the dependencies Hang, man! has via Bower and Composer: `composer install`
 
