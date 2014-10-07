@@ -11,7 +11,7 @@ especially good mood!) the repository to your local development set-up, and foll
 
  1. Clone the repository `git clone git@github.com:JackieXu/Hang-man-Platform.git hangman`
  2. In your terminal, change directories to the root Hang, man! directory: `cd hangman`
- 3. Install the dependencies Hang, man! has via Bower and Composer: `composer install`
+ 3. Install the dependencies Hang, man! has via Composer: `composer install`
 
 Contributing
 ------------
